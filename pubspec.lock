@@ -166,7 +166,7 @@ packages:
     source: hosted
     version: "6.1.0"
   http:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: http
       sha256: a2bbf9d017fcced29139daa8ed2bba4ece450ab222871df93ca9eec6f80c34ba
@@ -560,11 +560,9 @@ packages:
   shortcam_lite_api:
     dependency: "direct main"
     description:
-      path: "."
-      ref: HEAD
-      resolved-ref: b2531567a314c7dc121b7f2c4f3e20eb345d05ec
-      url: "https://github.com/hndrbrm/shortcam_lite_api.git"
-    source: git
+      path: "../shortcam_lite_api"
+      relative: true
+    source: path
     version: "1.0.0"
   sky_engine:
     dependency: transitive

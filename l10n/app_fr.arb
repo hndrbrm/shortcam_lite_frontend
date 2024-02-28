@@ -9,7 +9,7 @@
   "darkPhotonMode": "Sombre",
   "darkPhotonModeDescription": "L'application utilisera le mode sombre.",
   "email": "E-mail",
-  "endpointException": "Impossible de communiquer avec le serveur",
+  "deviceEndpointException": "Impossible de communiquer avec l'appareil",
   "error": "Erreur",
   "errorConnection": "La connexion semble instable. Veuillez vérifier le réseau et réessayer plus tard",
   "language": "Langue",

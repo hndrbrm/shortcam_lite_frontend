@@ -9,7 +9,7 @@
   "darkPhotonMode": "Dunkel",
   "darkPhotonModeDescription": "Die Anwendung verwendet den Dunkelmodus.",
   "email": "Email",
-  "endpointException": "Es kann nicht mit dem Server kommuniziert werden",
+  "deviceEndpointException": "Es kann nicht mit dem Gerät kommuniziert werden",
   "error": "Fehler",
   "errorConnection": "Die Verbindung scheint instabil zu sein. Bitte überprüfen Sie das Netzwerk und versuchen Sie es später erneut",
   "language": "Sprache",

@@ -3,13 +3,9 @@
 // by a BSD-style license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:media_kit/media_kit.dart';
 
 import 'singular_app.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  MediaKit.ensureInitialized();
-
   runApp(const SingularApp());
 }

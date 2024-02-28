@@ -3,6 +3,7 @@
 // by a BSD-style license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
+import 'package:media_kit/media_kit.dart';
 
 import '../data/loading/inherited_loading.dart';
 import '../route/home_route.dart';
@@ -52,9 +53,13 @@ final class _Init extends StatelessWidget with CallbackForStatelessWidget {
   Widget build(BuildContext context) => _child;
 
   Future<void> _init({ Loading? loading }) async {
-    // Replace this placeholder with async operation.
     loading?.setLoading(true);
-    await Future.delayed(const Duration(seconds: 3));
+
+    // Replace this dummy async, with the real one.
+    await Future.delayed(const Duration(seconds: 1));
+
+    MediaKit.ensureInitialized();
+
     loading?.setLoading(false);
 
     const HomeNavigator(navigator: navigator).root();

@@ -9,7 +9,7 @@
   "darkPhotonMode": "暗い",
   "darkPhotonModeDescription": "アプリケーションはダークモードを使用します。",
   "email": "Eメール",
-  "endpointException": "サーバーと通信できません",
+  "deviceEndpointException": "デバイスと通信できません",
   "error": "エラー",
   "errorConnection": "接続が不安定なようです。 ネットワークを確認して、後でもう一度試してください",
   "language": "言語",

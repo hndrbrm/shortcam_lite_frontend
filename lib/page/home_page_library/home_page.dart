@@ -50,6 +50,13 @@ class MyScreenState extends State<MyScreen> {
 
   @override
   Widget build(BuildContext context) {
+    NativePlayer native = player.platform as NativePlayer;
+    native.setProperty('profile', 'low-latency');
+    native.setProperty('untimed', '');
+    native.setProperty('no-cache', '');
+    native.setProperty('no-demuxer-thread', '');
+    native.setProperty('vd-lavc-threads', '1');
+
     player.open(Media(widget.url));
 
     return Center(

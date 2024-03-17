@@ -15,6 +15,7 @@
   "language": "语言",
   "lightPhotonMode": "光",
   "lightPhotonModeDescription": "该应用程序将使用灯光模式。",
+  "openDevice": "打开设备",
   "setting": "环境",
   "systemPhotonMode": "系统",
   "systemPhotonModeDescription": "深色/浅色主题将由系统决定。 如果系统使用深色模式，应用程序将使用相同的深色模式，反之亦然。",

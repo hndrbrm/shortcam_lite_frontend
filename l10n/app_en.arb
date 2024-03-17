@@ -15,6 +15,7 @@
   "language": "Language",
   "lightPhotonMode": "Light",
   "lightPhotonModeDescription": "The application will use light mode.",
+  "openDevice": "Open Device",
   "setting": "Setting",
   "systemPhotonMode": "System",
   "systemPhotonModeDescription": "Dark / Light Theme will be decided from the System. If the system use dark mode, the application will use the same dark mode, and vice versa.",

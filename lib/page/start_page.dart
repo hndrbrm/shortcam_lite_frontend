@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:media_kit/media_kit.dart';
 
 import '../data/loading/inherited_loading.dart';
+import '../route/device_route.dart';
 import '../route/home_route.dart';
 import '../shareable/data/loading_data.dart';
 import '../shareable/navigator_helper.dart';

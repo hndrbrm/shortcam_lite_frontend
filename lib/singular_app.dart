@@ -4,12 +4,13 @@
 
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
+import 'package:shortcam_lite_frontend/route/home_route.dart';
 
 import 'config/locale.dart';
 import 'data/locale_data.dart';
 import 'data/photon_mode/photon_mode_data.dart';
 import 'page/start_page.dart';
-import 'route/home_route.dart';
+import 'route/device_route.dart';
 import 'route/under_construction_route.dart';
 import 'shareable/data/language_data.dart';
 import 'shareable/data/loading_data.dart';
@@ -41,6 +42,7 @@ final class SingularApp extends StatelessWidget {
               onGenerateRoute: GenerateRouteHandler(
                 pageBuilderProxy: pageBuilderProxy,
                 builders: <PageGenerator>[
+                  const DeviceRoute(),
                   const HomeRoute(),
                   const UnderConstructionRoute(),
                 ],

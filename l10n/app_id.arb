@@ -15,6 +15,7 @@
   "language": "Bahasa",
   "lightPhotonMode": "Terang",
   "lightPhotonModeDescription": "Aplikasi akan menggunakan mode terang.",
+  "openDevice": "Buka Perangkat",
   "setting": "Pengaturan",
   "systemPhotonMode": "Sistem",
   "systemPhotonModeDescription": "Tema Gelap / Terang akan ditentukan dari Sistem. Jika sistem menggunakan mode gelap, aplikasi juga akan menggunakan mode gelap, begitu pula sebaliknya.",

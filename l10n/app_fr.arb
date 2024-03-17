@@ -15,6 +15,7 @@
   "language": "Langue",
   "lightPhotonMode": "Lumière",
   "lightPhotonModeDescription": "L'application utilisera le mode clair.",
+  "openDevice": "Ouvrir l'appareil",
   "setting": "Paramètre",
   "systemPhotonMode": "Système",
   "systemPhotonModeDescription": "Le thème sombre/clair sera décidé à partir du système. Si le système utilise le mode sombre, l'application utilisera le même mode sombre, et vice versa.",

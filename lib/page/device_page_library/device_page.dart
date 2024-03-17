@@ -2,13 +2,14 @@
 // All rights reserved. Use of this source code is governed
 // by a BSD-style license that can be found in the LICENSE file.
 
-part of 'home_page_library.dart';
+part of 'device_page_library.dart';
 
-final class HomePage extends StatelessWidget {
-  const HomePage({ super.key });
+final class DevicePage extends StatelessWidget {
+  const DevicePage({ super.key });
 
   @override
   Widget build(BuildContext context) => Scaffold(
+    appBar: AppBar(),
     body: RtspUrlScope(
       child: Stack(
         children: <Widget>[

@@ -15,6 +15,7 @@
   "language": "言語",
   "lightPhotonMode": "ライト",
   "lightPhotonModeDescription": "アプリケーションはライト モードを使用します。",
+  "openDevice": "デバイスを開く",
   "setting": "設定",
   "systemPhotonMode": "システム",
   "systemPhotonModeDescription": "ダーク/ライトテーマはシステムから決定されます。 システムがダーク モードを使用している場合、アプリケーションは同じダーク モードを使用し、その逆も同様です。",

@@ -15,6 +15,7 @@
   "language": "Sprache",
   "lightPhotonMode": "Licht",
   "lightPhotonModeDescription": "Die Anwendung verwendet den Lichtmodus.",
+  "openDevice": "Gerät öffnen",
   "setting": "Einstellung",
   "systemPhotonMode": "System",
   "systemPhotonModeDescription": "Das Dunkel-/Hell-Thema wird vom System festgelegt. Wenn das System den Dunkelmodus verwendet, verwendet die Anwendung denselben Dunkelmodus und umgekehrt.",

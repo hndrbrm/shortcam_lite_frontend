@@ -4,6 +4,7 @@
 
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
+import 'package:shortcam_lite_frontend/route/device_info_route.dart';
 import 'package:shortcam_lite_frontend/route/home_route.dart';
 
 import 'config/locale.dart';
@@ -43,6 +44,7 @@ final class SingularApp extends StatelessWidget {
                 pageBuilderProxy: pageBuilderProxy,
                 builders: <PageGenerator>[
                   const DeviceRoute(),
+                  const DeviceInfoRoute(),
                   const HomeRoute(),
                   const UnderConstructionRoute(),
                 ],

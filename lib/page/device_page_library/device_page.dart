@@ -8,20 +8,22 @@ final class DevicePage extends StatelessWidget {
   const DevicePage({ super.key });
 
   @override
-  Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(),
-    body: RtspUrlScope(
-      child: Stack(
-        children: <Widget>[
-          RtspUrlInheritor(
-            builder: (_, rtsp,) {
-              return MyScreen(
+  Widget build(BuildContext context) => LanguageInheritor(
+    builder: (_, language) => Scaffold(
+      appBar: AppBar(
+        title: Text(language.openDevice),
+      ),
+      body: RtspUrlScope(
+        child: Stack(
+          children: <Widget>[
+            RtspUrlInheritor(
+              builder: (_, rtsp,) => MyScreen(
                 url: rtsp?.sub ?? '',
-              );
-            },
-          ),
-          const InheritedLoading(),
-        ],
+              ),
+            ),
+            const InheritedLoading(),
+          ],
+        ),
       ),
     ),
   );
@@ -44,12 +46,6 @@ class MyScreenState extends State<MyScreen> {
   late final controller = VideoController(player);
 
   @override
-  void dispose() {
-    player.dispose();
-    super.dispose();
-  }
-
-  @override
   Widget build(BuildContext context) {
     NativePlayer native = player.platform as NativePlayer;
     native.setProperty('profile', 'low-latency');
@@ -67,5 +63,11 @@ class MyScreenState extends State<MyScreen> {
         child: Video(controller: controller),
       ),
     );
+  }
+
+  @override
+  void dispose() {
+    player.dispose();
+    super.dispose();
   }
 }

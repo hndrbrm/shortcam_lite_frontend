@@ -9,5 +9,6 @@ import 'package:media_kit/media_kit.dart';
 import 'package:media_kit_video/media_kit_video.dart';
 import 'package:shortcam_lite_frontend/data/loading/inherited_loading.dart';
 import 'package:shortcam_lite_frontend/data/rtsp_url_data.dart';
+import 'package:shortcam_lite_frontend/shareable/data/language_data.dart';
 
 part 'device_page.dart';

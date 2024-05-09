@@ -9,28 +9,48 @@ final class DevicePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => LanguageInheritor(
-    builder: (_, language) => Scaffold(
+    builder: (languageAmendment, language) => Scaffold(
       appBar: AppBar(
         title: Text(language.openDevice),
       ),
       body: RtspUrlScope(
-        child: Stack(
-          children: <Widget>[
-            RtspUrlInheritor(
-              builder: (_, rtsp,) => MyScreen(
-                url: rtsp?.sub ?? '',
+        child: PaletteScope(
+          child: Stack(
+            children: <Widget>[
+              ListView(
+                children: <Widget>[
+                  Wrap(
+                    children: <Widget>[
+                      PaletteInheritor(
+                        builder: (paletteAmendment, palette) => OutlinedButton(
+                          onPressed: () {
+                            if (palette != null) {
+                              paletteAmendment.set(palette.next);
+                            }
+                          },
+                          child: Text(palette?.next.value ?? ''),
+                        ),
+                      ),
+                    ],
+                  ),
+                  RtspUrlInheritor(
+                    builder: (_, rtsp,) => VideoPlayer(
+                      url: rtsp?.sub ?? '',
+                    ),
+                  ),
+                ],
               ),
-            ),
-            const InheritedLoading(),
-          ],
+              const InheritedLoading(),
+            ],
+          ),
         ),
       ),
     ),
   );
 }
 
-class MyScreen extends StatefulWidget {
-  const MyScreen({
+class VideoPlayer extends StatefulWidget {
+  const VideoPlayer({
     super.key,
     required this.url,
   });
@@ -38,30 +58,33 @@ class MyScreen extends StatefulWidget {
   final String url;
 
   @override
-  State<MyScreen> createState() => MyScreenState();
+  State<VideoPlayer> createState() => VideoPlayerState();
 }
 
-class MyScreenState extends State<MyScreen> {
+class VideoPlayerState extends State<VideoPlayer> {
   late final player = Player();
   late final controller = VideoController(player);
 
   @override
-  Widget build(BuildContext context) {
+  void initState() {
+    super.initState();
+
     NativePlayer native = player.platform as NativePlayer;
     native.setProperty('profile', 'low-latency');
     native.setProperty('untimed', '');
     native.setProperty('no-cache', '');
     native.setProperty('no-demuxer-thread', '');
     native.setProperty('vd-lavc-threads', '1');
+  }
 
+  @override
+  Widget build(BuildContext context) {
     player.open(Media(widget.url));
 
-    return Center(
-      child: SizedBox(
-        width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.width * 9.0 / 16.0,
-        child: Video(controller: controller),
-      ),
+    return SizedBox(
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.width * 9.0 / 16.0,
+      child: Video(controller: controller),
     );
   }
 
@@ -70,4 +93,12 @@ class MyScreenState extends State<MyScreen> {
     player.dispose();
     super.dispose();
   }
+}
+
+extension on Palette {
+  Palette get next => switch (this) {
+    Palette.rainbow => Palette.whiteHot,
+    Palette.whiteHot => Palette.ironRed,
+    Palette.ironRed => Palette.rainbow,
+  };
 }

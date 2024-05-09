@@ -7,8 +7,13 @@ library home_page_library;
 import 'package:flutter/material.dart';
 import 'package:media_kit/media_kit.dart';
 import 'package:media_kit_video/media_kit_video.dart';
+import 'package:shortcam_lite_api/shortcam_lite_api.dart';
 import 'package:shortcam_lite_frontend/data/loading/inherited_loading.dart';
 import 'package:shortcam_lite_frontend/data/rtsp_url_data.dart';
 import 'package:shortcam_lite_frontend/shareable/data/language_data.dart';
+import 'package:shortcam_lite_frontend/shareable/data/loading_data.dart';
+
+import '../../data/palette_data.dart';
+import '../../http/short_cam_lite_client.dart';
 
 part 'device_page.dart';

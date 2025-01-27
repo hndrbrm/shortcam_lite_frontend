@@ -57,10 +57,8 @@ dependencies:
   shared_preferences: ^2.0.15
 
   shortcam_lite_api:
-#    git:
-#      url: https://github.com/hndrbrm/shortcam_lite_api.git
-    path:
-      ../shortcam_lite_api
+    git:
+      url: https://github.com/hndrbrm/shortcam_lite_api.git
 
 dev_dependencies:
   flutter_test:
